@@ -1,0 +1,152 @@
+// ====================================================================
+// tensor_unit_16x16.sv : *** BEHAVIOURAL REFERENCE STUB - NOT THE DESIGN ***
+// Only used to bring the testbench up. Replace by the real RTL.
+// - output-stationary 16x16 systolic array, schedule t = i+j+k
+//   (row i of A skewed by i, column j of B skewed by j)
+// - array advances only on input_valid during the feed phase (bubbles stall)
+// - PE operand registers hold only the active low 4/8/16 bits (upper = 0)
+// - accumulators hold only the low 12/20/36 bits (upper = 0)
+// - c_out = accumulator sign-extended to 36 bits, registered with done
+// - Latency start-sample -> done-sample = 3N-1 + #bubbles
+// ====================================================================
+`timescale 1ns/1ps
+
+module tensor_unit_16x16 #(parameter int N = 16, parameter int DW = 16, parameter int AW = 36) (
+    input  logic              clk,
+    input  logic              reset,
+    input  logic              start,
+    input  logic              mode_1,
+    input  logic              mode_0,
+    input  logic              input_valid,
+    input  logic [N*DW-1:0]   a_col,
+    input  logic [N*DW-1:0]   b_row,
+    output logic              busy,
+    output logic              done,
+    output logic [N*N*AW-1:0] c_out
+);
+
+    localparam int DRAIN = 2*N - 1; // extra steps after the last beat
+
+    logic [1:0]         eff_mode;
+    logic [DW-1:0]      pe_a [N][N];
+    logic [DW-1:0]      pe_b [N][N];
+    logic [AW-1:0]      acc  [N][N];
+    logic [DW-1:0]      a_sk [N][N]; // row skew chains
+    logic [DW-1:0]      b_sk [N][N]; // column skew chains
+    logic               drain, fin;
+    int                 k_cnt, d_cnt;
+
+    // flattened white-box views for the TB toggle monitor
+    logic [N*N*DW-1:0]  pe_a_flat, pe_b_flat;
+    logic [N*N*AW-1:0]  pe_acc_flat;
+
+    always_comb begin
+        for (int i = 0; i < N; i++) begin
+            for (int j = 0; j < N; j++) begin
+                pe_a_flat[(i*N+j)*DW +: DW] = pe_a[i][j];
+                pe_b_flat[(i*N+j)*DW +: DW] = pe_b[i][j];
+                pe_acc_flat[(i*N+j)*AW +: AW] = acc[i][j];
+            end
+        end
+    end
+
+    function automatic int wid(logic [1:0] m);
+        return (m == 2'b00) ? 4 : (m == 2'b01) ? 8 : 16;
+    endfunction
+
+    function automatic int awid(logic [1:0] m);
+        return (m == 2'b00) ? 12 : (m == 2'b01) ? 20 : 36;
+    endfunction
+
+    function automatic logic [DW-1:0] gate(logic [DW-1:0] v, logic [1:0] m);
+        logic [DW-1:0] mk = (wid(m) >= DW) ? '1 : ((DW'(1) << wid(m)) - 1);
+        return v & mk;
+    endfunction
+
+    function automatic logic signed [AW-1:0] sx(logic [DW-1:0] v, logic [1:0] m);
+        int w = wid(m);
+        logic signed [AW-1:0] r = awid(m);
+        if (v[w-1]) r = r - (AW'(1) << w);
+        return r;
+    endfunction
+
+    function automatic logic [AW-1:0] amask(logic [1:0] m);
+        return (awid(m) == AW) ? '1 : ((AW'(1) << awid(m)) - 1);
+    endfunction
+
+    function automatic logic signed [AW-1:0] asx(logic [AW-1:0] v, logic [1:0] m);
+        int w = awid(m);
+        logic signed [AW-1:0] r = v;
+        if (w < AW && v[w-1]) r = r - (AW'(1) << w);
+        return r;
+    endfunction
+
+    always_ff @(posedge clk) begin
+        if (reset) begin
+            busy <= 0; done <= 0; drain <= 0; fin <= 0; k_cnt <= 0; d_cnt <= 0;
+            eff_mode <= 2'b00;
+            c_out <= '0;
+            for (int i = 0; i < N; i++) for (int j = 0; j < N; j++) begin
+                pe_a[i][j] <= '0; pe_b[i][j] <= '0; acc[i][j] <= '0; a_sk[i][j] <= '0; b_sk[i][j] <= '0;
+            end
+        end
+        else if (!busy) begin
+            done <= 0;
+            if (start && {mode_1, mode_0} != 2'b11) begin
+                busy <= 1;
+                eff_mode <= {mode_1, mode_0};
+                drain <= 0; fin <= 0; k_cnt <= 0; d_cnt <= 0;
+                for (int i = 0; i < N; i++) for (int j = 0; j < N; j++) begin
+                    pe_a[i][j] <= '0; pe_b[i][j] <= '0; acc[i][j] <= '0; a_sk[i][j] <= '0; b_sk[i][j] <= '0;
+                end
+            end
+        end
+        else if (done) begin
+            done <= 0;
+            busy <= 0;
+        end
+        else if (fin) begin
+            for (int i = 0; i < N; i++) begin
+                for (int j = 0; j < N; j++) begin
+                    c_out[(i*N+j)*AW +: AW] <= asx(acc[i][j], eff_mode);
+                end
+            end
+            done <= 1;
+            fin <= 0;
+        end
+        else if (drain || input_valid) begin
+            // --- one systolic step ---
+            for (int i = 0; i < N; i++) begin
+                logic [DW-1:0] ain, bin;
+                ain = drain ? '0 : gate(a_col[i*DW +: DW], eff_mode);
+                bin = drain ? '0 : gate(b_row[i*DW +: DW], eff_mode);
+                a_sk[i][0] <= ain;
+                b_sk[i][0] <= bin;
+                for (int d = 1; d < N; d++) begin
+                    a_sk[i][d] <= a_sk[i][d-1];
+                    b_sk[i][d] <= b_sk[i][d-1];
+                end
+                pe_a[i][0] <= (i == 0) ? ain : a_sk[i][i-1];  // row i delayed by i
+                pe_b[i][0] <= (i == 0) ? bin : b_sk[i][i-1];  // col j delayed by j
+            end
+            for (int i = 0; i < N; i++) begin
+                for (int j = 0; j < N; j++) begin
+                    if (j > 0) pe_a[i][j] <= pe_a[i][j-1];
+                    if (j > 0) pe_b[i][j] <= pe_b[i][j-1];
+                    acc[i][j] <= (acc[i][j] + AW'(sx(pe_a[i][j], eff_mode) * sx(pe_b[i][j], eff_mode)))
+                                 & amask(eff_mode);
+                end
+            end
+            // --- step bookkeeping ---
+            if (!drain) begin
+                k_cnt <= k_cnt + 1;
+                if (k_cnt == N-1) drain <= 1;
+            end
+            else begin
+                d_cnt <= d_cnt + 1;
+                if (d_cnt == DRAIN-1) begin drain <= 0; fin <= 1; end
+            end
+        end
+    end
+
+endmodule
