@@ -1,0 +1,624 @@
+xrun(64): 25.03-s005: (c) Copyright 1995-2025 Cadence Design Systems, Inc.
+TOOL:	xrun(64)	25.03-s005: Started on Nov 01, 2026 at 12:52:30 IST
+xrun
+	-clean
+	-sv
+	-64
+	-access +rwc
+	-timescale 1ns/1ps
+	-coverage all
+	-top tb_top
+	fsm.v
+	pe_adderfaha.v
+	pe_mode_decode.v
+	pe_mult16.v
+	pe_acc.v
+	pe_operand_regs.v
+	pe.v
+	top_level.v
+	tu_tb_all.sv
+	+TEST=all
+
+   User defined plus("+") options:
+	+TEST=all
+
+xrun: *N,CLEAN: Removing existing directory ./xcelium.d.
+SOFTINCLUDE $AMSHOME/tools/affirma_ams/etc/connect_lib/cds.lib
+|
+xrun: *W,DLCVAR (/afs/iitd.ac.in/service/cad/cadence/custom_ic_design/ic618/share/cdssetup/cds.lib,5): cds.lib Invalid environment variable ''.
+DEFINE diode_rc /afs/iitd.ac.in/user/j/jv/jvl252047/Analog_ELL_7304/assigne_1_part2/diode_rc
+|
+xrun: *W,DLCPTH (/afs/iitd.ac.in/user/j/jv/jvl252047/cds.lib,2): cds.lib Invalid path '/afs/iitd.ac.in/user/j/jv/jvl252047/Analog_ELL_7304/assigne_1_part2/diode_rc' (cds.lib command ignored).
+SOFTINCLUDE $AMSHOME/tools/affirma_ams/etc/connect_lib/cds.lib
+|
+xrun: *W,DLCVAR (/afs/iitd.ac.in/service/cad/cadence/custom_ic_design/ic618/share/cdssetup/cds.lib,5): cds.lib Invalid environment variable ''.
+DEFINE diode_rc /afs/iitd.ac.in/user/j/jv/jvl252047/Analog_ELL_7304/assigne_1_part2/diode_rc
+|
+xrun: *W,DLCPTH (/afs/iitd.ac.in/user/j/jv/jvl252047/cds.lib,2): cds.lib Invalid path '/afs/iitd.ac.in/user/j/jv/jvl252047/Analog_ELL_7304/assigne_1_part2/diode_rc' (cds.lib command ignored).
+SOFTINCLUDE $AMSHOME/tools/affirma_ams/etc/connect_lib/cds.lib
+|
+xrun: *W,DLCVAR (/afs/iitd.ac.in/service/cad/cadence/custom_ic_design/ic618/share/cdssetup/cds.lib,5): cds.lib Invalid environment variable ''.
+DEFINE diode_rc /afs/iitd.ac.in/user/j/jv/jvl252047/Analog_ELL_7304/assigne_1_part2/diode_rc
+|
+xrun: *W,DLCPTH (/afs/iitd.ac.in/user/j/jv/jvl252047/cds.lib,2): cds.lib Invalid path '/afs/iitd.ac.in/user/j/jv/jvl252047/Analog_ELL_7304/assigne_1_part2/diode_rc' (cds.lib command ignored).
+SOFTINCLUDE $AMSHOME/tools/affirma_ams/etc/connect_lib/cds.lib
+|
+xrun: *W,DLCVAR (/afs/iitd.ac.in/service/cad/cadence/custom_ic_design/ic618/share/cdssetup/cds.lib,5): cds.lib Invalid environment variable ''.
+DEFINE diode_rc /afs/iitd.ac.in/user/j/jv/jvl252047/Analog_ELL_7304/assigne_1_part2/diode_rc
+|
+xrun: *W,DLCPTH (/afs/iitd.ac.in/user/j/jv/jvl252047/cds.lib,2): cds.lib Invalid path '/afs/iitd.ac.in/user/j/jv/jvl252047/Analog_ELL_7304/assigne_1_part2/diode_rc' (cds.lib command ignored).
+SOFTINCLUDE $AMSHOME/tools/affirma_ams/etc/connect_lib/cds.lib
+|
+xrun: *W,DLCVAR (/afs/iitd.ac.in/service/cad/cadence/custom_ic_design/ic618/share/cdssetup/cds.lib,5): cds.lib Invalid environment variable ''.
+DEFINE diode_rc /afs/iitd.ac.in/user/j/jv/jvl252047/Analog_ELL_7304/assigne_1_part2/diode_rc
+|
+xrun: *W,DLCPTH (/afs/iitd.ac.in/user/j/jv/jvl252047/cds.lib,2): cds.lib Invalid path '/afs/iitd.ac.in/user/j/jv/jvl252047/Analog_ELL_7304/assigne_1_part2/diode_rc' (cds.lib command ignored).
+SOFTINCLUDE $AMSHOME/tools/affirma_ams/etc/connect_lib/cds.lib
+|
+xmvlog: *W,DLCVAR (/afs/iitd.ac.in/service/cad/cadence/custom_ic_design/ic618/share/cdssetup/cds.lib,5): cds.lib Invalid environment variable ''.
+DEFINE diode_rc /afs/iitd.ac.in/user/j/jv/jvl252047/Analog_ELL_7304/assigne_1_part2/diode_rc
+|
+xmvlog: *W,DLCPTH (/afs/iitd.ac.in/user/j/jv/jvl252047/cds.lib,2): cds.lib Invalid path '/afs/iitd.ac.in/user/j/jv/jvl252047/Analog_ELL_7304/assigne_1_part2/diode_rc' (cds.lib command ignored).
+file: fsm.v
+	module worklib.tu_fsm:v
+		errors: 0, warnings: 0
+file: pe_adderfaha.v
+	module worklib.pe_fa:v
+		errors: 0, warnings: 0
+	module worklib.pe_ha:v
+		errors: 0, warnings: 0
+file: pe_mode_decode.v
+	module worklib.pe_mode_decode:v
+		errors: 0, warnings: 0
+file: pe_mult16.v
+	module worklib.bw_4x4_sel:v
+		errors: 0, warnings: 0
+	module worklib.pe_mult16:v
+		errors: 0, warnings: 0
+file: pe_acc.v
+	module worklib.acs_mux2:v
+		errors: 0, warnings: 0
+	module worklib.acs_rca:v
+		errors: 0, warnings: 0
+	module worklib.acs_csel:v
+		errors: 0, warnings: 0
+	module worklib.acs_inc:v
+		errors: 0, warnings: 0
+	module worklib.pe_acc:v
+		errors: 0, warnings: 0
+file: pe_operand_regs.v
+	module worklib.pe_operand_regs:v
+		errors: 0, warnings: 0
+file: pe.v
+	module worklib.pe:v
+		errors: 0, warnings: 0
+file: top_level.v
+	module worklib.tensor_unit_16x16:v
+		errors: 0, warnings: 0
+file: tu_tb_all.sv
+	interface worklib.tu_if:sv
+		errors: 0, warnings: 0
+	package worklib.tu_pkg:sv
+		errors: 0, warnings: 0
+	module worklib.tb_top:sv
+		errors: 0, warnings: 0
+	Total errors/warnings found outside modules and primitives:
+		errors: 0, warnings: 2
+SOFTINCLUDE $AMSHOME/tools/affirma_ams/etc/connect_lib/cds.lib
+|
+xrun: *W,DLCVAR (/afs/iitd.ac.in/service/cad/cadence/custom_ic_design/ic618/share/cdssetup/cds.lib,5): cds.lib Invalid environment variable ''.
+DEFINE diode_rc /afs/iitd.ac.in/user/j/jv/jvl252047/Analog_ELL_7304/assigne_1_part2/diode_rc
+|
+xrun: *W,DLCPTH (/afs/iitd.ac.in/user/j/jv/jvl252047/cds.lib,2): cds.lib Invalid path '/afs/iitd.ac.in/user/j/jv/jvl252047/Analog_ELL_7304/assigne_1_part2/diode_rc' (cds.lib command ignored).
+SOFTINCLUDE $AMSHOME/tools/affirma_ams/etc/connect_lib/cds.lib
+|
+xrun: *W,DLCVAR (/afs/iitd.ac.in/service/cad/cadence/custom_ic_design/ic618/share/cdssetup/cds.lib,5): cds.lib Invalid environment variable ''.
+DEFINE diode_rc /afs/iitd.ac.in/user/j/jv/jvl252047/Analog_ELL_7304/assigne_1_part2/diode_rc
+|
+xrun: *W,DLCPTH (/afs/iitd.ac.in/user/j/jv/jvl252047/cds.lib,2): cds.lib Invalid path '/afs/iitd.ac.in/user/j/jv/jvl252047/Analog_ELL_7304/assigne_1_part2/diode_rc' (cds.lib command ignored).
+SOFTINCLUDE $AMSHOME/tools/affirma_ams/etc/connect_lib/cds.lib
+|
+xmelab: *W,DLCVAR (/afs/iitd.ac.in/service/cad/cadence/custom_ic_design/ic618/share/cdssetup/cds.lib,5): cds.lib Invalid environment variable ''.
+DEFINE diode_rc /afs/iitd.ac.in/user/j/jv/jvl252047/Analog_ELL_7304/assigne_1_part2/diode_rc
+|
+xmelab: *W,DLCPTH (/afs/iitd.ac.in/user/j/jv/jvl252047/cds.lib,2): cds.lib Invalid path '/afs/iitd.ac.in/user/j/jv/jvl252047/Analog_ELL_7304/assigne_1_part2/diode_rc' (cds.lib command ignored).
+	Elaborating the design hierarchy:
+		Caching library 'worklib' ....... Done
+	Top level design units:
+		tu_pkg
+		tb_top
+
+	Extracting FSMs for coverage:
+		worklib.tu_fsm
+			FSM extracted for state register state
+		worklib.pe_mode_decode
+		worklib.pe_operand_regs
+		worklib.pe_ha
+		worklib.pe_fa
+		worklib.bw_4x4_sel
+		worklib.pe_mult16
+		worklib.acs_rca
+		worklib.acs_mux2
+		worklib.acs_csel
+		worklib.acs_inc
+		worklib.pe_acc
+		worklib.pe
+		worklib.tensor_unit_16x16
+		worklib.tb_top
+	Total FSMs extracted = 1
+	Building instance overlay tables: 
+xmelab: *W,COVFDP: FSM description matching across instance of a module for "COVFDM" warning has been moved from elaboration to simulation dumping. To restore old matching behavior, use "set_backward_compat -COVFDM_during_elab". Also, it is recommended to use set_parameterized_module_coverage CCF command to avoid coverage loss due to FSM description difference across instances of a module.
+xmelab: *W,COVFHT: FSM hold transitions (transitions to the current state) are not extracted for any FSM in default mode.
+.................... Done
+	Enabling instrumentation for coverage types: block expression FSM toggle functional
+xmelab: *W,COVDCL: By default expression coverage is scored only for Verilog logical operators (|| and &&) and VHDL logical operators (OR, AND, NOR, and NAND), and is scored only in condition expressions. To score coverage for other operators and for expressions in other statements, use the "set_expr_coverable_operators" and "set_expr_coverable_statements" coverage configuration file commands with suitable options at elaboration.
+	Generating native compiled code:
+SOFTINCLUDE $AMSHOME/tools/affirma_ams/etc/connect_lib/cds.lib
+|
+xmvlog_cg: *W,DLCVAR (/afs/iitd.ac.in/service/cad/cadence/custom_ic_design/ic618/share/cdssetup/cds.lib,5): cds.lib Invalid environment variable ''.
+DEFINE diode_rc /afs/iitd.ac.in/user/j/jv/jvl252047/Analog_ELL_7304/assigne_1_part2/diode_rc
+|
+xmvlog_cg: *W,DLCPTH (/afs/iitd.ac.in/user/j/jv/jvl252047/cds.lib,2): cds.lib Invalid path '/afs/iitd.ac.in/user/j/jv/jvl252047/Analog_ELL_7304/assigne_1_part2/diode_rc' (cds.lib command ignored).
+		worklib.acs_mux2:v <0x5116eb6c>
+			streams:   0, words:     0
+		worklib.pe_acc:v <0x5779799c>
+			streams:  22, words:  9658
+		worklib.pe_fa:v <0x73b90036>
+			streams:   0, words:     0
+		worklib.pe_ha:v <0x11a82ce5>
+			streams:   0, words:     0
+		worklib.bw_4x4_sel:v <0x606d2d1d>
+			streams:   5, words:  3656
+		worklib.pe_operand_regs:v <0x738ec103>
+			streams:   7, words:  5373
+		worklib.pe:v <0x0a0a7102>
+			streams:   2, words:   501
+		worklib.pe_mode_decode:v <0x45f73249>
+			streams:   1, words:   496
+		worklib.tu_fsm:v <0x0b450c31>
+			streams:  13, words:  6755
+		worklib.tb_top:sv <0x3998af42>
+			streams:  20, words: 13203
+		worklib.tu_pkg:sv <0x134c2db9>
+			streams: 138, words: 290819
+		worklib.tu_if:sv <0x1df1587b>
+			streams: 126, words: 106533
+		worklib.tensor_unit_16x16:v <0x65bb32c6>
+			streams: 278, words: 197930
+		worklib.pe_mult16:v <0x71b00eb5>
+			streams:   9, words:  3410
+		worklib.acs_rca:v <0x7bb10c12>
+			streams:   0, words:     0
+		worklib.acs_rca:v <0x43d27476>
+			streams:   0, words:     0
+		worklib.acs_csel:v <0x778a54cc>
+			streams:   1, words:   226
+		worklib.acs_rca:v <0x268d50f3>
+			streams:   0, words:     0
+		worklib.acs_csel:v <0x6b994ea5>
+			streams:   1, words:   226
+		worklib.acs_inc:v <0x4e5c9ba3>
+			streams:   0, words:     0
+		worklib.acs_inc:v <0x3819a622>
+			streams:   0, words:     0
+    wire [3:0] an [0:3];
+                |
+xmelab: *W,COVMDD (./pe_mult16.v,68|16): Toggle coverage for bit, logic, reg, wire, enum and struct multi-dimensional static arrays and vectors is not supported by default. To enable toggle coverage for enum multi-dimensional static arrays specify 'set_toggle_scoring -sv_enum enable_mda' and for other multi-dimensional static arrays, specify 'set_toggle_scoring -sv_mda [<max_bit_base2_exponent>] [-sv_mda_of_struct]' ccf command in the coverage configuration file.
+    integer k;
+            |
+xmelab: *W,COVUTA (./pe_mult16.v,104|12): Toggle coverage is not supported for SystemVerilog integer, real array, string, dynamic array, sparse memory and reference ports. It is also not supported for VHDL multi-dimensional array and array of record. There may also be other such objects in the design.
+	Building instance specific data structures.
+xmelab: *W,CGPIDF: Covergroup "per_instance" option , by default, is set as 0.
+xmelab: *N,COVCGN: Coverage configuration file command "set_covergroup -new_instance_reporting" can be specified to improve the scoping and naming of covergroup instances. It may be noted that subsequent merging of a coverage database saved with this command and a coverage database saved without this command is not allowed.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                         Instances  Unique
+		Modules:                    87,044      15
+		Interfaces:                      1       1
+		Verilog packages:                1       1
+		Registers:                   2,527     542
+		Scalar wires:              310,048       -
+		Expanded wires:            185,949   6,947
+		Vectored wires:              4,128       -
+		Named events:                   14      17
+		Always blocks:               1,730      81
+		Initial blocks:                 28      28
+		Clocking blocks:                 3       3
+		Clocking items:                 23      23
+		Parallel blocks:                 1       1
+		Cont. assignments:          27,710     122
+		Pseudo assignments:          8,971       -
+		Assertions:                     19      19
+		Covergroup Instances:            0       6
+		SV Class declarations:          10      10
+		SV Class specializations:       10      10
+		Process Clocks:                911       3
+		Simulation timescale:          1ps
+	Writing initial simulation snapshot: worklib.tb_top:sv
+SOFTINCLUDE $AMSHOME/tools/affirma_ams/etc/connect_lib/cds.lib
+|
+xmsim: *W,DLCVAR (/afs/iitd.ac.in/service/cad/cadence/custom_ic_design/ic618/share/cdssetup/cds.lib,5): cds.lib Invalid environment variable ''.
+DEFINE diode_rc /afs/iitd.ac.in/user/j/jv/jvl252047/Analog_ELL_7304/assigne_1_part2/diode_rc
+|
+xmsim: *W,DLCPTH (/afs/iitd.ac.in/user/j/jv/jvl252047/cds.lib,2): cds.lib Invalid path '/afs/iitd.ac.in/user/j/jv/jvl252047/Analog_ELL_7304/assigne_1_part2/diode_rc' (cds.lib command ignored).
+Loading snapshot worklib.tb_top:sv .................... Done
+SVSEED default: 1
+xcelium> source /usr/local/tools/cadence/digital_ic_design/23.35-s106_1/XCELIUM25/tools/xcelium/files/xmsimrc
+xcelium> run
+===============================================================
+ TENSOR UNIT 16x16 TB : TEST=all  LAT_BASE=49
+===============================================================
+               45000 ---------------- running T01 ----------------
+              575000 [SB][T01 #3 INT4 K_ZERO] PASS  (EXP_RESULT, lat=49, bubbles=0)
+             1085000 [SB][T01 #6 INT8 K_ZERO] PASS  (EXP_RESULT, lat=49, bubbles=0)
+             1595000 [SB][T01 #9 INT16 K_ZERO] PASS  (EXP_RESULT, lat=49, bubbles=0)
+             1635000 ---------------- running T02 ----------------
+             2165000 [SB][T02 #14 INT4 K_IDENTITY] PASS  (EXP_RESULT, lat=49, bubbles=0)
+             2675000 [SB][T02 #17 INT8 K_IDENTITY] PASS  (EXP_RESULT, lat=49, bubbles=0)
+             3185000 [SB][T02 #20 INT16 K_IDENTITY] PASS  (EXP_RESULT, lat=49, bubbles=0)
+             3225000 ---------------- running T03 ----------------
+             3755000 [SB][T03 #25 INT4 K_RANDOM] PASS  (EXP_RESULT, lat=49, bubbles=0)
+             4265000 [SB][T03 #28 INT4 K_RANDOM] PASS  (EXP_RESULT, lat=49, bubbles=0)
+             4775000 [SB][T03 #31 INT4 K_RANDOM] PASS  (EXP_RESULT, lat=49, bubbles=0)
+             4815000 ---------------- running T04 ----------------
+             5345000 [SB][T04 #36 INT4 K_POSITIVE] PASS  (EXP_RESULT, lat=49, bubbles=0)
+             5855000 [SB][T04 #39 INT8 K_POSITIVE] PASS  (EXP_RESULT, lat=49, bubbles=0)
+             6365000 [SB][T04 #42 INT16 K_POSITIVE] PASS  (EXP_RESULT, lat=49, bubbles=0)
+             6405000 ---------------- running T05 ----------------
+             6935000 [SB][T05 #47 INT4 K_NEGATIVE] PASS  (EXP_RESULT, lat=49, bubbles=0)
+             7445000 [SB][T05 #50 INT8 K_NEGATIVE] PASS  (EXP_RESULT, lat=49, bubbles=0)
+             7955000 [SB][T05 #53 INT16 K_NEGATIVE] PASS  (EXP_RESULT, lat=49, bubbles=0)
+             7995000 ---------------- running T06 ----------------
+             8525000 [SB][T06 #58 INT4 K_MIXED] PASS  (EXP_RESULT, lat=49, bubbles=0)
+             9035000 [SB][T06 #61 INT8 K_MIXED] PASS  (EXP_RESULT, lat=49, bubbles=0)
+             9545000 [SB][T06 #64 INT16 K_MIXED] PASS  (EXP_RESULT, lat=49, bubbles=0)
+             9585000 ---------------- running T07 ----------------
+            10115000 [SB][T07 #69 INT4 K_MAXPOS] PASS  (EXP_RESULT, lat=49, bubbles=0)
+            10625000 [SB][T07 #72 INT8 K_MAXPOS] PASS  (EXP_RESULT, lat=49, bubbles=0)
+            11135000 [SB][T07 #75 INT16 K_MAXPOS] PASS  (EXP_RESULT, lat=49, bubbles=0)
+            11175000 ---------------- running T08 ----------------
+            11705000 [SB][T08 #80 INT4 K_MAXNEG] PASS  (EXP_RESULT, lat=49, bubbles=0)
+            12215000 [SB][T08 #83 INT4 K_MAXMIX] PASS  (EXP_RESULT, lat=49, bubbles=0)
+            12725000 [SB][T08 #86 INT8 K_MAXNEG] PASS  (EXP_RESULT, lat=49, bubbles=0)
+            13235000 [SB][T08 #89 INT8 K_MAXMIX] PASS  (EXP_RESULT, lat=49, bubbles=0)
+            13745000 [SB][T08 #92 INT16 K_MAXNEG] PASS  (EXP_RESULT, lat=49, bubbles=0)
+            14255000 [SB][T08 #95 INT16 K_MAXMIX] PASS  (EXP_RESULT, lat=49, bubbles=0)
+            14295000 ---------------- running T09 ----------------
+            14825000 [SB][T09 #100 INT8 K_RANDOM] PASS  (EXP_RESULT, lat=49, bubbles=0)
+            15335000 [SB][T09 #103 INT8 K_RANDOM] PASS  (EXP_RESULT, lat=49, bubbles=0)
+            15845000 [SB][T09 #106 INT8 K_RANDOM] PASS  (EXP_RESULT, lat=49, bubbles=0)
+            15885000 ---------------- running T10 ----------------
+            16415000 [SB][T10 #111 INT16 K_RANDOM] PASS  (EXP_RESULT, lat=49, bubbles=0)
+            16925000 [SB][T10 #114 INT16 K_RANDOM] PASS  (EXP_RESULT, lat=49, bubbles=0)
+            17435000 [SB][T10 #117 INT16 K_RANDOM] PASS  (EXP_RESULT, lat=49, bubbles=0)
+            17475000 ---------------- running T11 ----------------
+            18005000 [SB][T11 #122 INT4 K_DIRTY] PASS  (EXP_RESULT, lat=49, bubbles=0)
+            18515000 [SB][T11 #125 INT4 K_SPARSE] PASS  (EXP_RESULT, lat=49, bubbles=0)
+            19025000 [SB][T11 #128 INT8 K_DIRTY] PASS  (EXP_RESULT, lat=49, bubbles=0)
+            19535000 [SB][T11 #131 INT8 K_SPARSE] PASS  (EXP_RESULT, lat=49, bubbles=0)
+            20045000 [SB][T11 #134 INT16 K_DIRTY] PASS  (EXP_RESULT, lat=49, bubbles=0)
+            20555000 [SB][T11 #137 INT16 K_SPARSE] PASS  (EXP_RESULT, lat=49, bubbles=0)
+            20595000 ---------------- running T12 ----------------
+            21125000 [SB][T12 #142 INT4 K_ZERO] PASS  (EXP_RESULT, lat=49, bubbles=0)
+            21635000 [SB][T12 #145 INT4 K_IDENTITY] PASS  (EXP_RESULT, lat=49, bubbles=0)
+            22145000 [SB][T12 #148 INT4 K_POSITIVE] PASS  (EXP_RESULT, lat=49, bubbles=0)
+            22655000 [SB][T12 #151 INT4 K_NEGATIVE] PASS  (EXP_RESULT, lat=49, bubbles=0)
+            23165000 [SB][T12 #154 INT4 K_MIXED] PASS  (EXP_RESULT, lat=49, bubbles=0)
+            23675000 [SB][T12 #157 INT4 K_MAXPOS] PASS  (EXP_RESULT, lat=49, bubbles=0)
+            24185000 [SB][T12 #160 INT4 K_MAXNEG] PASS  (EXP_RESULT, lat=49, bubbles=0)
+            24695000 [SB][T12 #163 INT4 K_MAXMIX] PASS  (EXP_RESULT, lat=49, bubbles=0)
+            25205000 [SB][T12 #166 INT4 K_ACC_EXT] PASS  (EXP_RESULT, lat=49, bubbles=0)
+            25715000 [SB][T12 #169 INT4 K_SPARSE] PASS  (EXP_RESULT, lat=49, bubbles=0)
+            26225000 [SB][T12 #172 INT4 K_RANDOM] PASS  (EXP_RESULT, lat=49, bubbles=0)
+            26735000 [SB][T12 #175 INT4 K_DIRTY] PASS  (EXP_RESULT, lat=49, bubbles=0)
+            27245000 [SB][T12 #178 INT8 K_ZERO] PASS  (EXP_RESULT, lat=49, bubbles=0)
+            27755000 [SB][T12 #181 INT8 K_IDENTITY] PASS  (EXP_RESULT, lat=49, bubbles=0)
+            28265000 [SB][T12 #184 INT8 K_POSITIVE] PASS  (EXP_RESULT, lat=49, bubbles=0)
+            28775000 [SB][T12 #187 INT8 K_NEGATIVE] PASS  (EXP_RESULT, lat=49, bubbles=0)
+            29285000 [SB][T12 #190 INT8 K_MIXED] PASS  (EXP_RESULT, lat=49, bubbles=0)
+            29795000 [SB][T12 #193 INT8 K_MAXPOS] PASS  (EXP_RESULT, lat=49, bubbles=0)
+            30305000 [SB][T12 #196 INT8 K_MAXNEG] PASS  (EXP_RESULT, lat=49, bubbles=0)
+            30815000 [SB][T12 #199 INT8 K_MAXMIX] PASS  (EXP_RESULT, lat=49, bubbles=0)
+            31325000 [SB][T12 #202 INT8 K_ACC_EXT] PASS  (EXP_RESULT, lat=49, bubbles=0)
+            31835000 [SB][T12 #205 INT8 K_SPARSE] PASS  (EXP_RESULT, lat=49, bubbles=0)
+            32345000 [SB][T12 #208 INT8 K_RANDOM] PASS  (EXP_RESULT, lat=49, bubbles=0)
+            32855000 [SB][T12 #211 INT8 K_DIRTY] PASS  (EXP_RESULT, lat=49, bubbles=0)
+            33365000 [SB][T12 #214 INT16 K_ZERO] PASS  (EXP_RESULT, lat=49, bubbles=0)
+            33875000 [SB][T12 #217 INT16 K_IDENTITY] PASS  (EXP_RESULT, lat=49, bubbles=0)
+            34385000 [SB][T12 #220 INT16 K_POSITIVE] PASS  (EXP_RESULT, lat=49, bubbles=0)
+            34895000 [SB][T12 #223 INT16 K_NEGATIVE] PASS  (EXP_RESULT, lat=49, bubbles=0)
+            35405000 [SB][T12 #226 INT16 K_MIXED] PASS  (EXP_RESULT, lat=49, bubbles=0)
+            35915000 [SB][T12 #229 INT16 K_MAXPOS] PASS  (EXP_RESULT, lat=49, bubbles=0)
+            36425000 [SB][T12 #232 INT16 K_MAXNEG] PASS  (EXP_RESULT, lat=49, bubbles=0)
+            36935000 [SB][T12 #235 INT16 K_MAXMIX] PASS  (EXP_RESULT, lat=49, bubbles=0)
+            37445000 [SB][T12 #238 INT16 K_ACC_EXT] PASS  (EXP_RESULT, lat=49, bubbles=0)
+            37955000 [SB][T12 #241 INT16 K_SPARSE] PASS  (EXP_RESULT, lat=49, bubbles=0)
+            38465000 [SB][T12 #244 INT16 K_RANDOM] PASS  (EXP_RESULT, lat=49, bubbles=0)
+            38975000 [SB][T12 #247 INT16 K_DIRTY] PASS  (EXP_RESULT, lat=49, bubbles=0)
+            39015000 ---------------- running T13 ----------------
+            39545000 [SB][T13 #252 INT4 K_ACC_EXT] PASS  (EXP_RESULT, lat=49, bubbles=0)
+            40055000 [SB][T13 #255 INT4 K_MAXPOS] PASS  (EXP_RESULT, lat=49, bubbles=0)
+            40565000 [SB][T13 #258 INT4 K_MAXNEG] PASS  (EXP_RESULT, lat=49, bubbles=0)
+            41075000 [SB][T13 #261 INT4 K_MAXMIX] PASS  (EXP_RESULT, lat=49, bubbles=0)
+            41585000 [SB][T13 #264 INT8 K_ACC_EXT] PASS  (EXP_RESULT, lat=49, bubbles=0)
+            42095000 [SB][T13 #267 INT8 K_MAXPOS] PASS  (EXP_RESULT, lat=49, bubbles=0)
+            42605000 [SB][T13 #270 INT8 K_MAXNEG] PASS  (EXP_RESULT, lat=49, bubbles=0)
+            43115000 [SB][T13 #273 INT8 K_MAXMIX] PASS  (EXP_RESULT, lat=49, bubbles=0)
+            43625000 [SB][T13 #276 INT16 K_ACC_EXT] PASS  (EXP_RESULT, lat=49, bubbles=0)
+            44135000 [SB][T13 #279 INT16 K_MAXPOS] PASS  (EXP_RESULT, lat=49, bubbles=0)
+            44645000 [SB][T13 #282 INT16 K_MAXNEG] PASS  (EXP_RESULT, lat=49, bubbles=0)
+            45155000 [SB][T13 #285 INT16 K_MAXMIX] PASS  (EXP_RESULT, lat=49, bubbles=0)
+            45195000 ---------------- running T14 ----------------
+            45725000 [SB][T14 #290 INT4 K_RANDOM] PASS  (EXP_RESULT, lat=49, bubbles=0)
+            46235000 [SB][T14 #293 INT8 K_RANDOM] PASS  (EXP_RESULT, lat=49, bubbles=0)
+            46745000 [SB][T14 #296 INT16 K_RANDOM] PASS  (EXP_RESULT, lat=49, bubbles=0)
+            47255000 [SB][T14 #299 INT4 K_RANDOM] PASS  (EXP_RESULT, lat=49, bubbles=0)
+            47765000 [SB][T14 #302 INT8 K_RANDOM] PASS  (EXP_RESULT, lat=49, bubbles=0)
+            48275000 [SB][T14 #305 INT16 K_RANDOM] PASS  (EXP_RESULT, lat=49, bubbles=0)
+            48315000 ---------------- running T15 ----------------
+            48835000 [SB][T15 #310 INT16 K_MIXED] PASS  (EXP_RESULT, lat=49, bubbles=0)
+            49335000 [SB][T15 #313 INT8 K_MIXED] PASS  (EXP_RESULT, lat=49, bubbles=0)
+            49835000 [SB][T15 #316 INT4 K_MIXED] PASS  (EXP_RESULT, lat=49, bubbles=0)
+            50335000 [SB][T15 #319 INT16 K_MIXED] PASS  (EXP_RESULT, lat=49, bubbles=0)
+            50835000 [SB][T15 #322 INT8 K_MIXED] PASS  (EXP_RESULT, lat=49, bubbles=0)
+            51335000 [SB][T15 #325 INT4 K_MIXED] PASS  (EXP_RESULT, lat=49, bubbles=0)
+            51375000 ---------------- running T16 ----------------
+            51895000 [SB][T16 #330 INT4 K_RANDOM] PASS  (EXP_RESULT, lat=49, bubbles=0)
+            52395000 [SB][T16 #333 INT4 K_SPARSE] PASS  (EXP_RESULT, lat=49, bubbles=0)
+            52895000 [SB][T16 #336 INT4 K_POSITIVE] PASS  (EXP_RESULT, lat=49, bubbles=0)
+            53395000 [SB][T16 #339 INT8 K_NEGATIVE] PASS  (EXP_RESULT, lat=49, bubbles=0)
+            53895000 [SB][T16 #342 INT4 K_RANDOM] PASS  (EXP_RESULT, lat=49, bubbles=0)
+            54395000 [SB][T16 #345 INT16 K_MIXED] PASS  (EXP_RESULT, lat=49, bubbles=0)
+            54895000 [SB][T16 #348 INT8 K_SPARSE] PASS  (EXP_RESULT, lat=49, bubbles=0)
+            55395000 [SB][T16 #351 INT4 K_MIXED] PASS  (EXP_RESULT, lat=49, bubbles=0)
+            55895000 [SB][T16 #354 INT8 K_NEGATIVE] PASS  (EXP_RESULT, lat=49, bubbles=0)
+            56395000 [SB][T16 #357 INT8 K_SPARSE] PASS  (EXP_RESULT, lat=49, bubbles=0)
+            56895000 [SB][T16 #360 INT8 K_RANDOM] PASS  (EXP_RESULT, lat=49, bubbles=0)
+            57395000 [SB][T16 #363 INT16 K_POSITIVE] PASS  (EXP_RESULT, lat=49, bubbles=0)
+            57895000 [SB][T16 #366 INT16 K_MIXED] PASS  (EXP_RESULT, lat=49, bubbles=0)
+            58395000 [SB][T16 #369 INT4 K_MIXED] PASS  (EXP_RESULT, lat=49, bubbles=0)
+            58895000 [SB][T16 #372 INT16 K_SPARSE] PASS  (EXP_RESULT, lat=49, bubbles=0)
+            59395000 [SB][T16 #375 INT8 K_NEGATIVE] PASS  (EXP_RESULT, lat=49, bubbles=0)
+            59895000 [SB][T16 #378 INT16 K_POSITIVE] PASS  (EXP_RESULT, lat=49, bubbles=0)
+            60395000 [SB][T16 #381 INT16 K_POSITIVE] PASS  (EXP_RESULT, lat=49, bubbles=0)
+            60435000 ---------------- running T17 ----------------
+            60965000 [SB][T17 #386 INT8 K_RANDOM] PASS  (EXP_RESULT, lat=49, bubbles=0)
+            61035000 [SB][T17 #389 RSVD K_RANDOM] PASS  (EXP_IGNORED, lat=0, bubbles=0)
+            61065000 [SB][T17 #392 RSVD K_RANDOM] PASS  (EXP_IGNORED, lat=0, bubbles=0)
+            61555000 [SB][T17 #395 INT4 K_MIXED] PASS  (EXP_RESULT, lat=49, bubbles=0)
+            61585000 [SB][T17 #398 RSVD K_RANDOM] PASS  (EXP_IGNORED, lat=0, bubbles=0)
+            62075000 [SB][T17 #401 INT16 K_RANDOM] PASS  (EXP_RESULT, lat=49, bubbles=0)
+            62165000 [SB][T17 #405 RSVD K_RANDOM] PASS  (EXP_IGNORED, lat=0, bubbles=0)
+            62655000 [SB][T17 #408 INT8 K_NEGATIVE] PASS  (EXP_RESULT, lat=49, bubbles=0)
+            62695000 ---------------- running T18 ----------------
+            62745000 [SB][T18 #413 INT4 K_RANDOM] PASS  (EXP_ABORT, lat=0, bubbles=0)
+            63275000 [SB][T18 #416 INT8 K_RANDOM] PASS  (EXP_RESULT, lat=49, bubbles=0)
+            63355000 [SB][T18 #419 INT8 K_RANDOM] PASS  (EXP_ABORT, lat=5, bubbles=0)
+            63885000 [SB][T18 #422 INT16 K_RANDOM] PASS  (EXP_RESULT, lat=49, bubbles=0)
+            64065000 [SB][T18 #425 INT16 K_RANDOM] PASS  (EXP_ABORT, lat=15, bubbles=0)
+            64595000 [SB][T18 #428 INT4 K_RANDOM] PASS  (EXP_RESULT, lat=49, bubbles=0)
+            64925000 [SB][T18 #431 INT4 K_RANDOM] PASS  (EXP_ABORT, lat=30, bubbles=0)
+            65455000 [SB][T18 #434 INT8 K_RANDOM] PASS  (EXP_RESULT, lat=49, bubbles=0)
+            65925000 [SB][T18 #437 INT8 K_RANDOM] PASS  (EXP_ABORT, lat=44, bubbles=0)
+            66455000 [SB][T18 #440 INT16 K_RANDOM] PASS  (EXP_RESULT, lat=49, bubbles=0)
+            66495000 ---------------- running T19 ----------------
+            67025000 [SB][T19 #445 INT4 K_RANDOM] PASS  (EXP_RESULT, lat=49, bubbles=0)
+            67535000 [SB][T19 #448 INT8 K_RANDOM] PASS  (EXP_RESULT, lat=49, bubbles=0)
+            68045000 [SB][T19 #451 INT16 K_RANDOM] PASS  (EXP_RESULT, lat=49, bubbles=0)
+            68085000 ---------------- running T20 ----------------
+            68615000 [SB][T20 #456 INT4 K_RANDOM] PASS  (EXP_RESULT, lat=49, bubbles=0)
+            69115000 [SB][T20 #459 INT4 K_RANDOM] PASS  (EXP_RESULT, lat=49, bubbles=0)
+            69615000 [SB][T20 #462 INT8 K_RANDOM] PASS  (EXP_RESULT, lat=49, bubbles=0)
+            70115000 [SB][T20 #465 INT4 K_RANDOM] PASS  (EXP_RESULT, lat=49, bubbles=0)
+            70615000 [SB][T20 #468 INT4 K_RANDOM] PASS  (EXP_RESULT, lat=49, bubbles=0)
+            71115000 [SB][T20 #471 INT8 K_RANDOM] PASS  (EXP_RESULT, lat=49, bubbles=0)
+            71615000 [SB][T20 #474 INT4 K_RANDOM] PASS  (EXP_RESULT, lat=49, bubbles=0)
+            71655000 ---------------- running T21 ----------------
+            72215000 [SB][T21 #479 INT4 K_RANDOM] PASS  (EXP_RESULT, lat=52, bubbles=3)
+            72915000 [SB][T21 #482 INT4 K_MIXED] PASS  (EXP_RESULT, lat=68, bubbles=19)
+            74335000 [SB][T21 #485 INT4 K_RANDOM] PASS  (EXP_RESULT, lat=140, bubbles=91)
+            74945000 [SB][T21 #488 INT8 K_RANDOM] PASS  (EXP_RESULT, lat=59, bubbles=10)
+            75625000 [SB][T21 #491 INT8 K_MIXED] PASS  (EXP_RESULT, lat=66, bubbles=17)
+            77035000 [SB][T21 #494 INT8 K_RANDOM] PASS  (EXP_RESULT, lat=139, bubbles=90)
+            77655000 [SB][T21 #497 INT16 K_RANDOM] PASS  (EXP_RESULT, lat=60, bubbles=11)
+            78275000 [SB][T21 #500 INT16 K_MIXED] PASS  (EXP_RESULT, lat=60, bubbles=11)
+            79405000 [SB][T21 #503 INT16 K_RANDOM] PASS  (EXP_RESULT, lat=111, bubbles=62)
+            79445000 ---------------- running T22 ----------------
+            80015000 [SB][T22 #509 INT8 K_RANDOM] PASS  (EXP_RESULT, lat=49, bubbles=0)
+            80555000 [SB][T22 #513 INT16 K_MIXED] PASS  (EXP_ABORT, lat=40, bubbles=0)
+            81085000 [SB][T22 #516 INT4 K_RANDOM] PASS  (EXP_RESULT, lat=49, bubbles=0)
+            81615000 [SB][T22 #520 INT16 K_RANDOM] PASS  (EXP_RESULT, lat=49, bubbles=0)
+            81655000 ---------------- running T23 ----------------
+            82185000 [SB][T23 #525 INT4 K_RANDOM] PASS  (EXP_RESULT, lat=49, bubbles=0)
+            82685000 [SB][T23 #528 INT4 K_MAXNEG] PASS  (EXP_RESULT, lat=49, bubbles=0)
+            83265000 [SB][T23 #531 INT4 K_RANDOM] PASS  (EXP_RESULT, lat=56, bubbles=7)
+            83775000 [SB][T23 #534 INT8 K_RANDOM] PASS  (EXP_RESULT, lat=49, bubbles=0)
+            84275000 [SB][T23 #537 INT8 K_MAXNEG] PASS  (EXP_RESULT, lat=49, bubbles=0)
+            84885000 [SB][T23 #540 INT8 K_RANDOM] PASS  (EXP_RESULT, lat=59, bubbles=10)
+            85395000 [SB][T23 #543 INT16 K_RANDOM] PASS  (EXP_RESULT, lat=49, bubbles=0)
+            85895000 [SB][T23 #546 INT16 K_MAXNEG] PASS  (EXP_RESULT, lat=49, bubbles=0)
+            86455000 [SB][T23 #549 INT16 K_RANDOM] PASS  (EXP_RESULT, lat=54, bubbles=5)
+            86495000 ---------------- running T24 ----------------
+            87025000 [SB][T24 #554 INT4 K_MIXED] PASS  (EXP_RESULT, lat=49, bubbles=0)
+            87535000 [SB][T24 #557 INT4 K_NEGATIVE] PASS  (EXP_RESULT, lat=49, bubbles=0)
+            88045000 [SB][T24 #560 INT4 K_DIRTY] PASS  (EXP_RESULT, lat=49, bubbles=0)
+            88555000 [SB][T24 #563 INT4 K_MAXNEG] PASS  (EXP_RESULT, lat=49, bubbles=0)
+            89065000 [SB][T24 #566 INT4 K_ACC_EXT] PASS  (EXP_RESULT, lat=49, bubbles=0)
+            89665000 [SB][T24 #569 INT4 K_RANDOM] PASS  (EXP_RESULT, lat=58, bubbles=9)
+            89705000 ---------------- running T25 ----------------
+            90235000 [SB][T25 #574 INT8 K_MIXED] PASS  (EXP_RESULT, lat=49, bubbles=0)
+            90745000 [SB][T25 #577 INT8 K_NEGATIVE] PASS  (EXP_RESULT, lat=49, bubbles=0)
+            91255000 [SB][T25 #580 INT8 K_DIRTY] PASS  (EXP_RESULT, lat=49, bubbles=0)
+            91765000 [SB][T25 #583 INT8 K_MAXNEG] PASS  (EXP_RESULT, lat=49, bubbles=0)
+            92275000 [SB][T25 #586 INT8 K_ACC_EXT] PASS  (EXP_RESULT, lat=49, bubbles=0)
+            92825000 [SB][T25 #589 INT8 K_RANDOM] PASS  (EXP_RESULT, lat=53, bubbles=4)
+            92865000 ---------------- running T26 ----------------
+            93395000 [SB][T26 #594 INT16 K_MIXED] PASS  (EXP_RESULT, lat=49, bubbles=0)
+            93905000 [SB][T26 #597 INT16 K_NEGATIVE] PASS  (EXP_RESULT, lat=49, bubbles=0)
+            94415000 [SB][T26 #600 INT16 K_DIRTY] PASS  (EXP_RESULT, lat=49, bubbles=0)
+            94925000 [SB][T26 #603 INT16 K_MAXNEG] PASS  (EXP_RESULT, lat=49, bubbles=0)
+            95435000 [SB][T26 #606 INT16 K_ACC_EXT] PASS  (EXP_RESULT, lat=49, bubbles=0)
+            96035000 [SB][T26 #609 INT16 K_RANDOM] PASS  (EXP_RESULT, lat=58, bubbles=9)
+            96075000 ---------------- running T27 ----------------
+            96605000 [SB][T27 #614 INT4 K_ADV_UPPER] PASS  (EXP_RESULT, lat=49, bubbles=0)
+            97115000 [SB][T27 #617 INT4 K_ADV_UPPER] PASS  (EXP_RESULT, lat=49, bubbles=0)
+            97625000 [SB][T27 #620 INT8 K_ADV_UPPER] PASS  (EXP_RESULT, lat=49, bubbles=0)
+            98135000 [SB][T27 #623 INT8 K_ADV_UPPER] PASS  (EXP_RESULT, lat=49, bubbles=0)
+            98645000 [SB][T27 #626 INT16 K_ADV_UPPER] PASS  (EXP_RESULT, lat=49, bubbles=0)
+            99155000 [SB][T27 #629 INT16 K_ADV_UPPER] PASS  (EXP_RESULT, lat=49, bubbles=0)
+            99195000 ---------------- running T28 ----------------
+            99725000 [SB][T28 #634 INT4 K_BOUNDARY] PASS  (EXP_RESULT, lat=49, bubbles=0)
+           100265000 [SB][T28 #637 INT4 K_BOUNDARY] PASS  (EXP_RESULT, lat=52, bubbles=3)
+           100775000 [SB][T28 #640 INT4 K_MINUS1] PASS  (EXP_RESULT, lat=49, bubbles=0)
+           101285000 [SB][T28 #643 INT4 K_MIN_X_M1] PASS  (EXP_RESULT, lat=49, bubbles=0)
+           101795000 [SB][T28 #646 INT8 K_BOUNDARY] PASS  (EXP_RESULT, lat=49, bubbles=0)
+           102395000 [SB][T28 #649 INT8 K_BOUNDARY] PASS  (EXP_RESULT, lat=58, bubbles=9)
+           102905000 [SB][T28 #652 INT8 K_MINUS1] PASS  (EXP_RESULT, lat=49, bubbles=0)
+           103415000 [SB][T28 #655 INT8 K_MIN_X_M1] PASS  (EXP_RESULT, lat=49, bubbles=0)
+           103925000 [SB][T28 #658 INT16 K_BOUNDARY] PASS  (EXP_RESULT, lat=49, bubbles=0)
+           104475000 [SB][T28 #661 INT16 K_BOUNDARY] PASS  (EXP_RESULT, lat=53, bubbles=4)
+           104985000 [SB][T28 #664 INT16 K_MINUS1] PASS  (EXP_RESULT, lat=49, bubbles=0)
+           105495000 [SB][T28 #667 INT16 K_MIN_X_M1] PASS  (EXP_RESULT, lat=49, bubbles=0)
+           105535000 ---------------- running T29 ----------------
+           106065000 [SB][T29 #672 INT4 K_B_IDENTITY] PASS  (EXP_RESULT, lat=49, bubbles=0)
+           106575000 [SB][T29 #675 INT4 K_PERM] PASS  (EXP_RESULT, lat=49, bubbles=0)
+           107085000 [SB][T29 #678 INT8 K_B_IDENTITY] PASS  (EXP_RESULT, lat=49, bubbles=0)
+           107595000 [SB][T29 #681 INT8 K_PERM] PASS  (EXP_RESULT, lat=49, bubbles=0)
+           108105000 [SB][T29 #684 INT16 K_B_IDENTITY] PASS  (EXP_RESULT, lat=49, bubbles=0)
+           108615000 [SB][T29 #687 INT16 K_PERM] PASS  (EXP_RESULT, lat=49, bubbles=0)
+           108655000 ---------------- running T30 ----------------
+           109185000 [SB][T30 #693 INT4 K_SAMEDATA] PASS  (EXP_RESULT, lat=49, bubbles=0)
+           109685000 [SB][T30 #696 INT8 K_SAMEDATA] PASS  (EXP_RESULT, lat=49, bubbles=0)
+           110185000 [SB][T30 #699 INT16 K_SAMEDATA] PASS  (EXP_RESULT, lat=49, bubbles=0)
+           110695000 [SB][T30 #702 INT16 K_SAMEDATA] PASS  (EXP_RESULT, lat=49, bubbles=0)
+           111195000 [SB][T30 #705 INT4 K_SAMEDATA] PASS  (EXP_RESULT, lat=49, bubbles=0)
+           111705000 [SB][T30 #708 INT8 K_SAMEDATA] PASS  (EXP_RESULT, lat=49, bubbles=0)
+           112215000 [SB][T30 #712 INT4 K_SAMEDATA] PASS  (EXP_RESULT, lat=49, bubbles=0)
+           112715000 [SB][T30 #715 INT8 K_SAMEDATA] PASS  (EXP_RESULT, lat=49, bubbles=0)
+           113215000 [SB][T30 #718 INT16 K_SAMEDATA] PASS  (EXP_RESULT, lat=49, bubbles=0)
+           113725000 [SB][T30 #721 INT16 K_SAMEDATA] PASS  (EXP_RESULT, lat=49, bubbles=0)
+           114225000 [SB][T30 #724 INT4 K_SAMEDATA] PASS  (EXP_RESULT, lat=49, bubbles=0)
+           114735000 [SB][T30 #727 INT8 K_SAMEDATA] PASS  (EXP_RESULT, lat=49, bubbles=0)
+           115245000 [SB][T30 #731 INT8 K_RANDOM] PASS  (EXP_RESULT, lat=49, bubbles=0)
+           115745000 [SB][T30 #734 INT16 K_RANDOM] PASS  (EXP_RESULT, lat=49, bubbles=0)
+           115785000 ---------------- running T31 ----------------
+           116315000 [SB][T31 #739 INT4 K_MAXNEG] PASS  (EXP_RESULT, lat=49, bubbles=0)
+           116815000 [SB][T31 #742 INT4 K_ZERO] PASS  (EXP_RESULT, lat=49, bubbles=0)
+           117315000 [SB][T31 #745 INT4 K_ACC_EXT] PASS  (EXP_RESULT, lat=49, bubbles=0)
+           117815000 [SB][T31 #748 INT4 K_IDENTITY] PASS  (EXP_RESULT, lat=49, bubbles=0)
+           118315000 [SB][T31 #751 INT8 K_ZERO] PASS  (EXP_RESULT, lat=49, bubbles=0)
+           118825000 [SB][T31 #754 INT8 K_MAXNEG] PASS  (EXP_RESULT, lat=49, bubbles=0)
+           119325000 [SB][T31 #757 INT8 K_ZERO] PASS  (EXP_RESULT, lat=49, bubbles=0)
+           119825000 [SB][T31 #760 INT8 K_ACC_EXT] PASS  (EXP_RESULT, lat=49, bubbles=0)
+           120325000 [SB][T31 #763 INT8 K_IDENTITY] PASS  (EXP_RESULT, lat=49, bubbles=0)
+           120825000 [SB][T31 #766 INT16 K_ZERO] PASS  (EXP_RESULT, lat=49, bubbles=0)
+           121335000 [SB][T31 #769 INT16 K_MAXNEG] PASS  (EXP_RESULT, lat=49, bubbles=0)
+           121835000 [SB][T31 #772 INT16 K_ZERO] PASS  (EXP_RESULT, lat=49, bubbles=0)
+           122335000 [SB][T31 #775 INT16 K_ACC_EXT] PASS  (EXP_RESULT, lat=49, bubbles=0)
+           122835000 [SB][T31 #778 INT16 K_IDENTITY] PASS  (EXP_RESULT, lat=49, bubbles=0)
+           123335000 [SB][T31 #781 INT4 K_ZERO] PASS  (EXP_RESULT, lat=49, bubbles=0)
+           123375000 ---------------- running T32 ----------------
+           123905000 [SB][T32 #786 INT4 K_RANDOM] PASS  (EXP_RESULT, lat=49, bubbles=0)
+           124405000 [SB][T32 #789 INT16 K_MIXED] PASS  (EXP_RESULT, lat=49, bubbles=0)
+           124915000 [SB][T32 #792 INT8 K_RANDOM] PASS  (EXP_RESULT, lat=49, bubbles=0)
+           125415000 [SB][T32 #795 INT4 K_MIXED] PASS  (EXP_RESULT, lat=49, bubbles=0)
+           125925000 [SB][T32 #798 INT16 K_RANDOM] PASS  (EXP_RESULT, lat=49, bubbles=0)
+           126425000 [SB][T32 #801 INT8 K_MIXED] PASS  (EXP_RESULT, lat=49, bubbles=0)
+           126465000 ---------------- running T33 ----------------
+           127025000 [SB][T33 #806 INT4 K_RANDOM] PASS  (EXP_RESULT, lat=49, bubbles=0)
+           127545000 [SB][T33 #809 INT4 K_MIXED] PASS  (EXP_RESULT, lat=49, bubbles=0)
+           128075000 [SB][T33 #812 INT4 K_RANDOM] PASS  (EXP_RESULT, lat=49, bubbles=0)
+           128615000 [SB][T33 #815 INT8 K_RANDOM] PASS  (EXP_RESULT, lat=49, bubbles=0)
+           129135000 [SB][T33 #818 INT8 K_MIXED] PASS  (EXP_RESULT, lat=49, bubbles=0)
+           129665000 [SB][T33 #821 INT8 K_RANDOM] PASS  (EXP_RESULT, lat=49, bubbles=0)
+           130205000 [SB][T33 #824 INT16 K_RANDOM] PASS  (EXP_RESULT, lat=49, bubbles=0)
+           130725000 [SB][T33 #827 INT16 K_MIXED] PASS  (EXP_RESULT, lat=49, bubbles=0)
+           131255000 [SB][T33 #830 INT16 K_RANDOM] PASS  (EXP_RESULT, lat=49, bubbles=0)
+           131295000 ---------------- running T34 ----------------
+           131835000 [SB][T34 #835 INT4 K_RANDOM] PASS  (EXP_RESULT, lat=49, bubbles=0)
+           132355000 [SB][T34 #838 INT4 K_ADV_UPPER] PASS  (EXP_RESULT, lat=49, bubbles=0)
+           132875000 [SB][T34 #841 INT8 K_RANDOM] PASS  (EXP_RESULT, lat=49, bubbles=0)
+           133395000 [SB][T34 #844 INT8 K_ADV_UPPER] PASS  (EXP_RESULT, lat=49, bubbles=0)
+           133915000 [SB][T34 #847 INT16 K_RANDOM] PASS  (EXP_RESULT, lat=49, bubbles=0)
+           134435000 [SB][T34 #850 INT16 K_ADV_UPPER] PASS  (EXP_RESULT, lat=49, bubbles=0)
+===============================================================
+---------------------------------------------------------------
+ SCOREBOARD : 259 items, 259 PASS, 0 FAIL
+   results=249 ignored(RSVD)=4 aborted(reset)=6
+   err: data=0 latency=0 outcome=0 mode=0 ovf=0 beats=0 rsvd=0 sext=0 xmode=0
+   T01 :   3 pass   0 fail
+   T02 :   3 pass   0 fail
+   T03 :   3 pass   0 fail
+   T04 :   3 pass   0 fail
+   T05 :   3 pass   0 fail
+   T06 :   3 pass   0 fail
+   T07 :   3 pass   0 fail
+   T08 :   6 pass   0 fail
+   T09 :   3 pass   0 fail
+   T10 :   3 pass   0 fail
+   T11 :   6 pass   0 fail
+   T12 :  36 pass   0 fail
+   T13 :  12 pass   0 fail
+   T14 :   6 pass   0 fail
+   T15 :   6 pass   0 fail
+   T16 :  18 pass   0 fail
+   T17 :   8 pass   0 fail
+   T18 :  10 pass   0 fail
+   T19 :   3 pass   0 fail
+   T20 :   7 pass   0 fail
+   T21 :   9 pass   0 fail
+   T22 :   4 pass   0 fail
+   T23 :   9 pass   0 fail
+   T24 :   6 pass   0 fail
+   T25 :   6 pass   0 fail
+   T26 :   6 pass   0 fail
+   T27 :   6 pass   0 fail
+   T28 :  12 pass   0 fail
+   T29 :   6 pass   0 fail
+   T30 :  14 pass   0 fail
+   T31 :  15 pass   0 fail
+   T32 :   6 pass   0 fail
+   T33 :   9 pass   0 fail
+   T34 :   6 pass   0 fail
+---------------------------------------------------------------
+---------------------------------------------------------------
+ PRECISION-GATING TOGGLE REPORT (PE operand + accumulator regs)
+   mode  | busy cyc |  opd low tog | opd UPPER tog |  acc low tog | acc UPPER tog
+   INT4  |     4193 |      1123056 |             0 |       995610 |             0      (gated OK)
+   INT8  |     4219 |      2196809 |             0 |      1772537 |             0      (gated OK)
+   INT16 |     4043 |      4249802 |             0 |      3218318 |             0                
+---------------------------------------------------------------
+ SCHEDULE CHECK (t=i+j+k) :  ON  ops=255 steps=11832 failing steps=0
+---------------------------------------------------------------
+ FUNCTIONAL COVERAGE
+   cg_op     (cp_mode, cp_test_kind)        : 100.00 %
+   cg_sign   (cp_a_sign x cp_b_sign)        : 100.00 %
+   cg_acc    (cp_acc_extreme)               : 100.00 %
+   cg_switch (cx_prev_mode x cur_mode)      : 100.00 %
+   cg_ctrl   (cp_ctrl_event)                : 100.00 %
+   cg_lat    (cp_latency)                   : 100.00 %
+---------------------------------------------------------------
+ SVA errors=0  driver timeouts=0  spurious done=0  lost busy=0  unmatched exp=0 obs=0
+ ***  TEST all PASSED  ***
+===============================================================
+Simulation complete via $finish(1) at time 134525 NS + 2
+./tu_tb_all.sv:1622     $finish;
+xcelium> exit
+xmsim: *N,COVCGN: Coverage configuration file command "set_covergroup -new_instance_reporting" can be specified to improve the scoping and naming of covergroup instances. It may be noted that subsequent merging of a coverage database saved with this command and a coverage database saved without this command is not allowed.
+xmsim: *W,CGDEFN: Default name "tb_top.t.env.cov.cg_op" will be generated for covergroup instance "cg_op" as the name of the covergroup instance is not specified explicitly: ./tu_tb_all.sv, 385.
+xmsim: *W,CGDEFN: Default name "tb_top.t.env.cov.cg_sign" will be generated for covergroup instance "cg_sign" as the name of the covergroup instance is not specified explicitly: ./tu_tb_all.sv, 394.
+xmsim: *W,CGDEFN: Default name "tb_top.t.env.cov.cg_acc" will be generated for covergroup instance "cg_acc" as the name of the covergroup instance is not specified explicitly: ./tu_tb_all.sv, 404.
+xmsim: *W,CGDEFN: Default name "tb_top.t.env.cov.cg_switch" will be generated for covergroup instance "cg_switch" as the name of the covergroup instance is not specified explicitly: ./tu_tb_all.sv, 412.
+xmsim: *W,CGDEFN: Default name "tb_top.t.env.cov.cg_ctrl" will be generated for covergroup instance "cg_ctrl" as the name of the covergroup instance is not specified explicitly: ./tu_tb_all.sv, 420.
+xmsim: *W,CGDEFN: Default name "tb_top.t.env.cov.cg_lat" will be generated for covergroup instance "cg_lat" as the name of the covergroup instance is not specified explicitly: ./tu_tb_all.sv, 426.
+
+coverage setup:
+  workdir  :  ./cov_work
+  dutinst  :  tb_top(tb_top)
+  scope    :  scope
+  testname :  test
+
+coverage files:
+  model(design data) :  ./cov_work/scope/icc_108fa718_14c4934a.ucm
+  data               :  ./cov_work/scope/test/icc_108fa718_14c4934a.ucd
+TOOL:	xrun(64)	25.03-s005: Exiting on Nov 01, 2026 at 12:53:41 IST  (total: 00:01:11)
